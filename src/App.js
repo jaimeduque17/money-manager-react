@@ -26,7 +26,7 @@ function App() {
 			// after adding it, it gets false
 			saveCreateExpense(false);
 		}
-	}, [createExpense])
+	}, [createExpense, expenses, expense, residuary])
 
 	return (
 		<div className="App container">
@@ -50,8 +50,8 @@ function App() {
 								<div className="one-half column">
 									<List
 										expenses={expenses}
-									/>
-									<BudgetControl 
+										/>
+									<BudgetControl
 										budget={budget}
 										residuary={residuary}
 									/>
